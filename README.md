@@ -5,41 +5,43 @@
 
 1. [Autoren](#autoren)
 2. [Beispielbenutzer](#beispielbenutzer)
-3. [Einleitung](#einleitung)
-4. [Zweck des Dokuments](#zweck-des-dokuments)
-5. [Kontext der Softwarearchitektur](#kontext-der-softwarearchitektur)
+3. [Beispiel Anfrangen](#beispiel-anfrangen)
+4. [Einleitung](#einleitung)
+5. [Zweck des Dokuments](#zweck-des-dokuments)
+6. [Kontext der Softwarearchitektur](#kontext-der-softwarearchitektur)
     - [Kontextabgrenzung](#kontextabgrenzung)
     - [Fachlicher Kontext](#fachlicher-kontext)
     - [Technischer Kontext](#technischer-kontext)
-6. [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
-7. [UML Diagramm](#uml-diagramm)
-8. [Laufzeitsichten](#laufzeitsichten)
+7. [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
+8. [UML Diagramm](#uml-diagramm)
+9. [Laufzeitsichten](#laufzeitsichten)
     - [Benutzerauthentifizierung](#benutzerauthentifizierung)
     - [Hauptmenü](#hauptmenü)
-9. [Kritische Schnittstellen](#kritische-schnittstellen)
-10. [Infrastrukturelle Überlegungen](#infrastrukturelle-überlegungen)
+10. [Kritische Schnittstellen](#kritische-schnittstellen)
+11. [Infrastrukturelle Überlegungen](#infrastrukturelle-überlegungen)
     - [Grundlage und Bedeutung der Infrastruktur](#grundlage-und-bedeutung-der-infrastruktur)
-11. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+12. [Querschnittliche Konzepte](#querschnittliche-konzepte)
     - [Motivation](#motivation)
     - [Form](#form)
-12. [Schnittstellen](#schnittstellen)
+13. [Schnittstellen](#schnittstellen)
     - [Datenbankzugriff mit SQLite](#datenbankzugriff-mit-sqlite)
-13. [Auswertung](#auswertung)
-14. [Risiken und technische Schulden](#risiken-und-technische-schulden)
+14. [Auswertung](#auswertung)
+15. [Risiken und technische Schulden](#risiken-und-technische-schulden)
     - [API-Abhängigkeiten](#api-abhängigkeiten)
     - [Datenbanklimitierungen](#datenbanklimitierungen)
     - [Technische Schulden und Software-Design](#technische-schulden-und-software-design)
-15. [Testabdeckung](#testabdeckung)
-16. [Gesamtbetrachtung](#gesamtbetrachtung)
-17. [Erweiterungen](#erweiterungen)
-18. [Fehlerbehebung](#fehlerbehebung)
-19. [Installationsanleitung](#installationsanleitung)
+16. [Testabdeckung](#testabdeckung)
+17. [Gesamtbetrachtung](#gesamtbetrachtung)
+18. [Erweiterungen](#erweiterungen)
+19. [Fehlerbehebung](#fehlerbehebung)
+20. [Installationsanleitung](#installationsanleitung)
     - [Konfiguration](#konfiguration)
-20. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
+21. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
     - [Algemeine Bot-Dokumentation zu allen Bots](#allgemeine-bot-dokumentation-zu-allen-bots)
     - [WikiBot](#wikibot)
     - [TranslateBot](#translatebot)
     - [WetterBot](#wetterbot)
+
 
 ## Autoren
 
@@ -52,6 +54,36 @@
 
 - Benutzername: user2
 - Passwort: pass2
+
+### Beispiel Anfrangen
+
+ ```bash
+       list bots
+   ```
+ ```bash
+       activate bot wetterbot
+   ```
+ ```bash
+       @wetterbot wie ist das Wetter in bielefeld
+   ```
+ ```bash
+       activate bot wikibot
+   ```
+ ```bash
+     @wikibot was ist bielefeld
+   ```
+ ```bash
+       activate bot translatebot
+   ```
+ ```bash
+     @translatebot übersetze folgendes in das englische: This work is a super performance
+   ```
+ ```bash
+    deactivate bot translatebot
+   ```
+ ```bash
+    @exit
+   ```
 
 ## Einleitung
 
