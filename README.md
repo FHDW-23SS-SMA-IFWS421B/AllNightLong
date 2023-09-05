@@ -1,7 +1,7 @@
 # AllNightLong
-## Inhaltsverzeichnis
 
-# Inhaltsverzeichnis
+
+## Inhaltsverzeichnis
 
 1. [Autoren](#autoren)
 2. [Beispielbenutzer](#beispielbenutzer)
