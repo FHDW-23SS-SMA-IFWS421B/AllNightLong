@@ -1,4 +1,45 @@
 # AllNightLong
+## Inhaltsverzeichnis
+
+# Inhaltsverzeichnis
+
+1. [Autoren](#autoren)
+2. [Beispielbenutzer](#beispielbenutzer)
+3. [Einleitung](#einleitung)
+4. [Zweck des Dokuments](#zweck-des-dokuments)
+5. [Kontext der Softwarearchitektur](#kontext-der-softwarearchitektur)
+    - [Kontextabgrenzung](#kontextabgrenzung)
+    - [Fachlicher Kontext](#fachlicher-kontext)
+    - [Technischer Kontext](#technischer-kontext)
+6. [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
+7. [UML Diagramm](#uml-diagramm)
+8. [Laufzeitsichten](#laufzeitsichten)
+    - [Benutzerauthentifizierung](#benutzerauthentifizierung)
+    - [Hauptmenü](#hauptmenü)
+9. [Kritische Schnittstellen](#kritische-schnittstellen)
+10. [Infrastrukturelle Überlegungen](#infrastrukturelle-überlegungen)
+    - [Grundlage und Bedeutung der Infrastruktur](#grundlage-und-bedeutung-der-infrastruktur)
+11. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+    - [Motivation](#motivation)
+    - [Form](#form)
+12. [Schnittstellen](#schnittstellen)
+    - [Datenbankzugriff mit SQLite](#datenbankzugriff-mit-sqlite)
+13. [Auswertung](#auswertung)
+14. [Risiken und technische Schulden](#risiken-und-technische-schulden)
+    - [API-Abhängigkeiten](#api-abhängigkeiten)
+    - [Datenbanklimitierungen](#datenbanklimitierungen)
+    - [Technische Schulden und Software-Design](#technische-schulden-und-software-design)
+15. [Testabdeckung](#testabdeckung)
+16. [Gesamtbetrachtung](#gesamtbetrachtung)
+17. [Erweiterungen](#erweiterungen)
+18. [Fehlerbehebung](#fehlerbehebung)
+19. [Installationsanleitung](#installationsanleitung)
+    - [Konfiguration](#konfiguration)
+20. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
+    - [Algemeine Bot-Dokumentation zu allen Bots](#allgemeine-bot-dokumentation-zu-allen-bots)
+    - [WikiBot](#wikibot)
+    - [TranslateBot](#translatebot)
+    - [WetterBot](#wetterbot)
 
 ## Autoren
 
