@@ -14,7 +14,7 @@ import org.json.simple.JSONObject;
 
 
 public class TranslateApi implements TranslationProcessor {
-         private String apiKey;
+         private final String apiKey;
             private final Map<String, String> languageMap;
 
         public TranslateApi() {
@@ -22,7 +22,7 @@ public class TranslateApi implements TranslationProcessor {
         this.apiKey = appConfig.getApiKey("translate_api_key");
         languageMap = new HashMap<>();
         languageMap.put("bulgarische", "BG");
-        languageMap.put("tscheechische", "CS");
+        languageMap.put("tschechische", "CS");
         languageMap.put("dänische", "DA");
         languageMap.put("deutsche", "DE");
         languageMap.put("griechische", "EL");
