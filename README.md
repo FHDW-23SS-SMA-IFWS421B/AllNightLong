@@ -18,7 +18,7 @@
     - [Technischer Kontext](#technischer-kontext)
         - [Technische Schnittstellen](#technische-schnittstellen)
     - [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
-    - [Zusammenfassung](#zusammenfassung)
+    - [Schlussfolgerung](#schlussfolgerung)
 6. [Lösungsstrategie](#lösungsstrategie)
    - [Motivation](#motivation-1)
    - [Technologieentscheidung](#technologieentscheidung)
@@ -48,7 +48,7 @@
         - [Abhängigkeitsmanagement](#abhängigkeitsmanagement)
         - [Datenmanagement und Authentifizierung](#datenmanagement-und-authentifizierung)
         - [Bot-Management](#bot-management)
-        - [Schlussfolgerung](#schlussfolgerung)
+        - [Schlussfolgerung](#schlussfolgerung-1)
 11. [Querschnittliche Konzepte](#querschnittliche-konzepte)
     - [Modularität und Schnittstellenorientierung](#modularität-und-schnittstellenorientierung)
     - [Architekturmuster und -stile](#architekturmuster-und--stile)
@@ -208,7 +208,7 @@ Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Met
 ![Kontext Diagramm](docs/Context_Diagram.jpg)
 
 
-### Zusammenfassung
+### Schlussfolgerung
 Die Kontextabgrenzung dient als Grundlage für das Verständnis und die Weiterentwicklung des "All Night Long" Systems. Sie bietet ein klares Bild der fachlichen und technischen Aspekte, die für die Kommunikation und Interaktion mit externen und internen Entitäten relevant sind. Dies trägt dazu bei, die Komplexität zu bewältigen und Risiken zu minimieren.
 
 ## Lösungsstrategie
