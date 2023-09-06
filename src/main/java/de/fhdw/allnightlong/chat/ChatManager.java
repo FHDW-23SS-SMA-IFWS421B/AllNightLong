@@ -1,6 +1,7 @@
 package de.fhdw.allnightlong.chat;
 
 
+
 import de.fhdw.allnightlong.db.DatabaseManager;
 
 import java.util.List;

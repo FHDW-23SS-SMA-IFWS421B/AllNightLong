@@ -13,7 +13,7 @@
     - [Fachlicher Kontext](#fachlicher-kontext)
     - [Technischer Kontext](#technischer-kontext)
 7. [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
-8. [UML Diagramm](#uml-diagramm)
+8. [Bausteinsicht](#Bausteinsicht)
 9. [Laufzeitsichten](#laufzeitsichten)
     - [Benutzerauthentifizierung](#benutzerauthentifizierung)
     - [Hauptmenü](#hauptmenü)
@@ -174,7 +174,7 @@ Neben technischen Überlegungen umfasst meine Lösungsstrategie auch organisator
 
 Die gefällten Entscheidungen bilden das Fundament für die Planung und Umsetzung unseres Systems. Sie sind darauf ausgerichtet, die Zielvorgaben der Projektbeschreibung effizient zu realisieren, während sie zugleich eine widerstandsfähige und skalierbare Architektur ermöglichen. In den nachfolgenden Abschnitten werden diese einzelnen Entscheidungen detailliert betrachtet und ihre Einflüsse auf die Gesamtstruktur erläutert.
 
-##Bausteinsicht
+## Bausteinsicht
 
 ### Überblick über die Architektur
 Das AllNightLong-Projekt ist modular aufgebaut und besteht aus verschiedenen unabhängigen, aber integrierten Komponenten. Die Hauptmodule sind:
