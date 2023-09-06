@@ -9,6 +9,7 @@ import de.fhdw.allnightlong.bots.translatebot.TranslateBot;
 import de.fhdw.allnightlong.bots.weatherbot.WeatherBot;
 import de.fhdw.allnightlong.bots.wikibot.Wikibot;
 import de.fhdw.allnightlong.chat.ChatManager;
+import de.fhdw.allnightlong.chat.SimpleChatManager;
 import de.fhdw.allnightlong.db.DatabaseManager;
 import de.fhdw.allnightlong.db.SqlLiteManager;
 import de.fhdw.allnightlong.user.Authenticator;
@@ -32,7 +33,7 @@ public class AllNightLong {
 
         DatabaseManager databaseManager = new SqlLiteManager();
         databaseManager.connect();
-        ChatManager chatManager = new ChatManager(databaseManager);
+        ChatManager chatManager = new SimpleChatManager(databaseManager);
 
         System.out.println("Bitte Benutzernamen eingeben:");
         String username = scanner.nextLine();

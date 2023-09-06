@@ -53,7 +53,6 @@
     - [Modularität und Schnittstellenorientierung](#modularität-und-schnittstellenorientierung)
     - [Architekturmuster und -stile](#architekturmuster-und--stile)
     - [Technologiestacks](#technologiestacks)
-    - [Domänenmodelle](#domänenmodelle)
     - [Sicherheitskonzepte](#sicherheitskonzepte)
     - [Standard-Frameworks und Bibliotheken](#standard-frameworks-und-bibliotheken)
 12. [Schnittstellen](#schnittstellen)
@@ -341,8 +340,6 @@ Die Anwendung verfolgt eine Client-Server-Architektur mit starkem Fokus auf die 
 #### Technologiestacks
 Ein einheitlicher Technologiestack mit Java als Programmiersprache und SQLite für die Datenbankverwaltung sorgt für Homogenität innerhalb des Systems. Ergänzend dazu werden weit verbreitete Bibliotheken und Frameworks für spezielle Aufgaben genutzt, etwa HttpClient für Netzwerkanfragen oder JSONObject zur JSON-Verarbeitung.
 
-#### Domänenmodelle
-Die Architektur implementiert ein abstraktes Domänenmodell, welches die verschiedenen Aspekte des Systems – von Benutzerinteraktion und Authentifizierung bis zu Datenmanagement und API-Integration – zusammenführt.
 
 #### Sicherheitskonzepte
 Während Sicherheitsaspekte sich nicht direkt als einzelne Bausteine repräsentieren lassen, sind sie dennoch integraler Bestandteil der Architektur. Authentifizierungen sind implementiert, um die Integrität und Vertraulichkeit der Systemdaten zu gewährleisten.
