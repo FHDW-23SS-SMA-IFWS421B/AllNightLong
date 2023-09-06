@@ -1,4 +1,4 @@
-# AllNightLong
+# AllNightLong Dokumentenstruktur
 
 
 ## Inhaltsverzeichnis
@@ -18,7 +18,7 @@
     - [Benutzerauthentifizierung](#benutzerauthentifizierung)
     - [Hauptmenü](#hauptmenü)
 10. [Kritische Schnittstellen](#kritische-schnittstellen)
-11. [Infrastrukturelle Überlegungen](#infrastrukturelle-überlegungen)
+11. [Infrastruktursicht](#infrastruktursicht)
     - [Grundlage und Bedeutung der Infrastruktur](#grundlage-und-bedeutung-der-infrastruktur)
 12. [Querschnittliche Konzepte](#querschnittliche-konzepte)
     - [Motivation](#motivation)
@@ -51,7 +51,7 @@
 
 - Alexander Lunewski
 
-### Beispielbenutzer
+## Beispielbenutzer
 
 - Benutzername: user1
 - Passwort: pass1
@@ -59,7 +59,7 @@
 - Benutzername: user2
 - Passwort: pass2
 
-### Beispiel Anfrangen
+## Beispiel Anfrangen
 
  ```bash
        list bots
@@ -153,7 +153,7 @@ Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Met
 ### Zusammenfassung
 Die Kontextabgrenzung dient als Grundlage für das Verständnis und die Weiterentwicklung des "All Night Long" Systems. Sie bietet ein klares Bild der fachlichen und technischen Aspekte, die für die Kommunikation und Interaktion mit externen und internen Entitäten relevant sind. Dies trägt dazu bei, die Komplexität zu bewältigen und Risiken zu minimieren.
 
-### Lösungsstrategie
+## Lösungsstrategie
 Unsere Lösungsstrategie ist modular und erweiterbar. Durch die Verwendung von Interfaces wie ApiProcessor und DatabaseManager wird es einfach, zusätzliche Funktionen und Dienste zu integrieren, ohne den bestehenden Code zu beeinträchtigen.
 
 ### Technologieentscheidung
@@ -239,7 +239,7 @@ Die Betriebsstabilität der Software im Rahmen des AllNightLong-Projekts ist sig
 
 Für eine verbesserte Lesbarkeit und Fokusierung auf den Hauptprozessfluss sind diese kritischen Abhängigkeiten in den BPMN-Diagrammen nicht separat dargestellt.
 
-### Infrastrukturelle Überlegung
+## Infrastruktursicht
 Die vorhandene technische Infrastruktur, einschließlich Prozessoren und Systemtopologie, stellt die Grundlage für die Implementierung der verschiedenen Software-Komponenten dar.
 
 ### Grundlage und Bedeutung der Infrastruktur
