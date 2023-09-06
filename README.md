@@ -7,44 +7,102 @@
 2. [Beispielbenutzer](#beispielbenutzer)
 3. [Beispiel Anfrangen](#beispiel-anfrangen)
 4. [Einleitung](#einleitung)
-5. [Zweck des Dokuments](#zweck-des-dokuments)
-6. [Kontext der Softwarearchitektur](#kontext-der-softwarearchitektur)
-    - [Kontextabgrenzung](#kontextabgrenzung)
-    - [Fachlicher Kontext](#fachlicher-kontext)
-    - [Technischer Kontext](#technischer-kontext)
-7. [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
-8. [Bausteinsicht](#Bausteinsicht)
-9. [Laufzeitsichten](#laufzeitsichten)
-    - [Benutzerauthentifizierung](#benutzerauthentifizierung)
-    - [Hauptmenü](#hauptmenü)
-10. [Kritische Schnittstellen](#kritische-schnittstellen)
-11. [Infrastruktursicht](#infrastruktursicht)
-    - [Grundlage und Bedeutung der Infrastruktur](#grundlage-und-bedeutung-der-infrastruktur)
-12. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+    - [Zweck des Dokuments](#zweck-des-dokuments)
+    - [Kontext der Softwarearchitektur](#kontext-der-softwarearchitektur)
+5. [Kontextabgrenzung](#kontextabgrenzung)
     - [Motivation](#motivation)
     - [Form](#form)
-13. [Schnittstellen](#schnittstellen)
+    - [Fachlicher Kontext](#fachlicher-kontext)
+        - [Externe Kommunikationspartner](#externe-kommunikationspartner)
+        - [Fachliche Schnittstellen](#fachliche-schnittstellen)
+    - [Technischer Kontext](#technischer-kontext)
+        - [Technische Schnittstellen](#technische-schnittstellen)
+    - [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
+    - [Zusammenfassung](#zusammenfassung)
+6. [Lösungsstrategie](#lösungsstrategie)
+   - [Motivation](#motivation-1)
+   - [Technologieentscheidung](#technologieentscheidung)
+   - [Architektur- und Entwurfsmuster](#architektur--und-entwurfsmuster)
+   - [Qualitätsanforderungen](#qualitätsanforderungen)
+   - [Organisatorische Entscheidungen](#organisatorische-entscheidungen)
+7. [Bausteinsicht](#bausteinsicht)
+    - [Überblick über die Architektur](#überblick-über-die-architektur)
+    - [API Utility Klassen](#api-utility-klassen)
+    - [API-Schnittstellen und Klassen](#api-schnittstellen-und-klassen)
+    - [Bot-Klassen](#bot-klassen)
+    - [Managementsysteme](#managementsysteme)
+    - [Benutzerverwaltung](#benutzerverwaltung)
+    - [Beziehungen zwischen den Komponenten](#beziehungen-zwischen-den-komponenten)
+8. [Laufzeitsichten](#laufzeitsichten)
+    - [Benutzerauthentifizierung](#benutzerauthentifizierung)
+        - [Anwendungsstart](#anwendungsstart)
+    - [Hauptmenü](#hauptmenü)
+        - [Eingabeaufforderung](#eingabeaufforderung)
+        - [Zusatzangaben](#zusatzangaben)
+9. [Kritische Schnittstellen](#kritische-schnittstellen)
+10. [Infrastruktursicht](#infrastruktursicht)
+    - [Grundlage und Bedeutung der Infrastruktur](#grundlage-und-bedeutung-der-infrastruktur)
+        - [UML Diagramm](#uml-diagramm)
+        - [Modularität und Kapselung](#modularität-und-kapselung)
+        - [Interface-Architektur](#interface-architektur)
+        - [Abhängigkeitsmanagement](#abhängigkeitsmanagement)
+        - [Datenmanagement und Authentifizierung](#datenmanagement-und-authentifizierung)
+        - [Bot-Management](#bot-management)
+        - [Schlussfolgerung](#schlussfolgerung)
+11. [Querschnittliche Konzepte](#querschnittliche-konzepte)
+    - [Modularität und Schnittstellenorientierung](#modularität-und-schnittstellenorientierung)
+    - [Architekturmuster und -stile](#architekturmuster-und--stile)
+    - [Technologiestacks](#technologiestacks)
+    - [Domänenmodelle](#domänenmodelle)
+    - [Sicherheitskonzepte](#sicherheitskonzepte)
+    - [Standard-Frameworks und Bibliotheken](#standard-frameworks-und-bibliotheken)
+12. [Schnittstellen](#schnittstellen)
+    - [Spezifikation zur robusten Kommunikation](#spezifikation-zur-robusten-kommunikation)
+        - [Nutzung externer APIs](#nutzung-externer-apis)
+    - [Behandlung von Fehlercodes](#behandlung-von-fehlercodes)
+    - [Timeouts und Wiederholungsversuche](#timeouts-und-wiederholungsversuche)
     - [Datenbankzugriff mit SQLite](#datenbankzugriff-mit-sqlite)
-14. [Auswertung](#auswertung)
-15. [Risiken und technische Schulden](#risiken-und-technische-schulden)
+    - [Auswertung](#auswertung)
+13. [Risiken und technische Schulden](#risiken-und-technische-schulden)
     - [API-Abhängigkeiten](#api-abhängigkeiten)
     - [Datenbanklimitierungen](#datenbanklimitierungen)
     - [Technische Schulden und Software-Design](#technische-schulden-und-software-design)
-16. [Testabdeckung](#testabdeckung)
-17. [Gesamtbetrachtung](#gesamtbetrachtung)
-18. [Erweiterungen](#erweiterungen)
-19. [Fehlerbehebung](#fehlerbehebung)
-20. [Installationsanleitung](#installationsanleitung)
-    - [Konfiguration](#konfiguration)
-21. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
-    - [Algemeine Bot-Dokumentation zu allen Bots](#allgemeine-bot-dokumentation-zu-allen-bots)
+    - [Testabdeckung](#testabdeckung)
+    - [Gesamtbetrachtung](#gesamtbetrachtung)
+14. [Erweiterungen](#erweiterungen)
+15. [Fehlerbehebung](#fehlerbehebung)
+16. [Installationsanleitung](#installationsanleitung)
+17. [Konfiguration](#konfiguration)
+18. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
+    - [Allgemeine Bot-Dokumentation zu allen Bots](#allgemeine-bot-dokumentation-zu-allen-bots)
+        - [Kontextabgrenzung](#kontextabgrenzung-1)
+        - [Lösungsstrategie](#lösungsstrategie-1)
+        - [Bausteinsicht](#bausteinsicht-1)
+        - [Laufzeitsicht](#laufzeitsicht-1)
+        - [Schnittstellen](#schnittstellen-1)
     - [WikiBot](#wikibot)
+        - [Kontextabgrenzung](#kontextabgrenzung-2)
+        - [Lösungsstrategie](#lösungsstrategie-2)
+        - [Bausteinsicht](#bausteinsicht-2)
+        - [Laufzeitsicht](#laufzeitsicht-2)
+        - [Schnittstellen](#schnittstellen-2)
     - [TranslateBot](#translatebot)
+        - [Kontextabgrenzung](#kontextabgrenzung-3)
+        - [Lösungsstrategie](#lösungsstrategie-3)
+        - [Bausteinsicht](#bausteinsicht-3)
+        - [Laufzeitsicht](#laufzeitsicht-3)
+        - [Schnittstellen](#schnittstellen-3)
     - [WetterBot](#wetterbot)
-22. [Ausblick](#ausblick)
-    - [Zukünftige Entwicklungsmöglichkeiten](#zuknftige-entwicklungsmglichkeiten)
+        - [Kontextabgrenzung](#kontextabgrenzung-4)
+        - [Lösungsstrategie](#lösungsstrategie-4)
+        - [Bausteinsicht](#bausteinsicht-4)
+        - [Laufzeitsicht](#laufzeitsicht-4)
+        - [Schnittstellen](#schnittstellen-4)
+19. [Ausblick](#ausblick)
+    - [Zukünftige Entwicklungsmöglichkeiten](#zukünftige-entwicklungsmöglichkeiten)
     - [Technische Schulden und Risiken](#technische-schulden-und-risiken)
-23. [Fazit](#fazit)
+20. [Fazit](#fazit)
+
 
 
 ## Autoren
@@ -114,7 +172,7 @@ Insgesamt stellt die Kontextabgrenzung sicher, dass alle Teammitglieder und exte
 In der heutigen Zeit, in der Softwarelösungen in einem komplexen und multifunktionalen Technologieumfeld agieren müssen, gewinnt die klare Abgrenzung eines Systems gegenüber seinen Kommunikationspartnern stark an Bedeutung. Solche Kommunikationspartner können Benutzer, andere Softwareanwendungen, Datenbanken oder andere Dienste sein. Es ist von entscheidender Bedeutung, den Kontext zu verstehen, in dem ein System operiert, um die robuste und effiziente Funktion desselben sicherzustellen. Ein präzises Verständnis der fachlichen und technischen Schnittstellen ermöglicht nicht nur eine effektivere Kommunikation, sondern erleichtert auch die Systemerweiterung, Wartung und Skalierbarkeit.
 
 ### Form
-Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Methoden, darunter Kontextdiagramme und tabellarische Auflistungen, um ein umfassendes Bild der externen Kommunikationsbeziehungen und Schnittstellen des Systems zu zeichnen.
+Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Methoden, darunter Kontextdiagramme, um ein umfassendes Bild der Kommunikationsbeziehungen und Schnittstellen des Systems zu zeichnen.
 
 ### Fachlicher Kontext
 
@@ -154,7 +212,10 @@ Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Met
 Die Kontextabgrenzung dient als Grundlage für das Verständnis und die Weiterentwicklung des "All Night Long" Systems. Sie bietet ein klares Bild der fachlichen und technischen Aspekte, die für die Kommunikation und Interaktion mit externen und internen Entitäten relevant sind. Dies trägt dazu bei, die Komplexität zu bewältigen und Risiken zu minimieren.
 
 ## Lösungsstrategie
-Unsere Lösungsstrategie ist modular und erweiterbar. Durch die Verwendung von Interfaces wie ApiProcessor und DatabaseManager wird es einfach, zusätzliche Funktionen und Dienste zu integrieren, ohne den bestehenden Code zu beeinträchtigen.
+Die Lösungsstrategie ist modular und erweiterbar. Durch die Verwendung von Interfaces wie ApiProcessor und DatabaseManager wird es einfach, zusätzliche Funktionen und Dienste zu integrieren, ohne den bestehenden Code zu beeinträchtigen.
+### Motivation
+
+Die gefällten Entscheidungen bilden das Fundament für die Planung und Umsetzung des Systems. Sie sind darauf ausgerichtet, die Zielvorgaben der Projektbeschreibung effizient zu realisieren, während sie zugleich eine widerstandsfähige und skalierbare Architektur ermöglichen. In den nachfolgenden Abschnitten werden diese einzelnen Entscheidungen detailliert betrachtet und ihre Einflüsse auf die Gesamtstruktur erläutert.
 
 ### Technologieentscheidung
 Die Wahl der Technologien wurde auf Basis von Zuverlässigkeit, Skalierbarkeit und Gemeinschaftsunterstützung getroffen. SQLite wurde wegen seiner Leichtigkeit und Effizienz für kleinere Anwendungen ausgewählt. Für API-Interaktionen wurde das HTTP-Protokoll verwendet, da es weit verbreitet und gut dokumentiert ist.
@@ -168,11 +229,8 @@ Das System ist so ausgelegt, dass es eine hohe Verfügbarkeit, Zuverlässigkeit 
 
 ### Organisatorische Entscheidungen
 
-Neben technischen Überlegungen umfasst meine Lösungsstrategie auch organisatorische Elemente, obwohl ich als einziger Entwickler an diesem Projekt gearbeitet habe. Dies beinhaltet die Planung und Strukturierung des Entwicklungsprozesses, die individuelle Aufgabendelegation und die Überwachung des Entwicklungsfortschritts. Diese selbstverwalteten Prozesse haben dazu beigetragen, die Entwicklung effizient zu gestalten, kontinuierliche Verbesserungen vorzunehmen und den Code durch wiederholte Debugging-Schritte zu optimieren.
+Neben technischen Überlegungen umfasst die Lösungsstrategie auch organisatorische Elemente, obwohl ich als einziger Entwickler an diesem Projekt gearbeitet habe. Dies beinhaltet die Planung und Strukturierung des Entwicklungsprozesses, die individuelle Aufgabendelegation und die Überwachung des Entwicklungsfortschritts. Diese selbstverwalteten Prozesse haben dazu beigetragen, die Entwicklung effizient zu gestalten, kontinuierliche Verbesserungen vorzunehmen und den Code durch wiederholte Debugging-Schritte zu optimieren.
 
-### Motivation
-
-Die gefällten Entscheidungen bilden das Fundament für die Planung und Umsetzung unseres Systems. Sie sind darauf ausgerichtet, die Zielvorgaben der Projektbeschreibung effizient zu realisieren, während sie zugleich eine widerstandsfähige und skalierbare Architektur ermöglichen. In den nachfolgenden Abschnitten werden diese einzelnen Entscheidungen detailliert betrachtet und ihre Einflüsse auf die Gesamtstruktur erläutert.
 
 ## Bausteinsicht
 
@@ -287,16 +345,10 @@ Ein einheitlicher Technologiestack mit Java als Programmiersprache und SQLite f�
 Die Architektur implementiert ein abstraktes Domänenmodell, welches die verschiedenen Aspekte des Systems – von Benutzerinteraktion und Authentifizierung bis zu Datenmanagement und API-Integration – zusammenführt.
 
 #### Sicherheitskonzepte
-Während Sicherheitsaspekte sich nicht direkt als einzelne Bausteine repräsentieren lassen, sind sie dennoch integraler Bestandteil der Architektur. Authentifizierung und Datenverschlüsselung sind durchgehend implementiert, um die Integrität und Vertraulichkeit der Systemdaten zu gewährleisten.
+Während Sicherheitsaspekte sich nicht direkt als einzelne Bausteine repräsentieren lassen, sind sie dennoch integraler Bestandteil der Architektur. Authentifizierungen sind implementiert, um die Integrität und Vertraulichkeit der Systemdaten zu gewährleisten.
 
 #### Standard-Frameworks und Bibliotheken
 Die Architektur nutzt etablierte Frameworks und Bibliotheken wie HttpClient für HTTP-Anfragen oder JSONObject für die Verarbeitung von JSON-Daten. Die Nutzung dieser bewährten Komponenten fördert die Zuverlässigkeit und Wartbarkeit des Systems.
-
-### Motivation
-Diese übergreifenden Konzepte und Prinzipien bilden das Rückgrat für die konzeptionelle Integrität der Architektur. Sie sorgen für eine hohe innere Qualität des Systems durch Konsistenz und Homogenität. Zudem erleichtern sie die Anpassung und Erweiterung des Systems, indem sie als Leitfaden für die Entwicklung dienen.
-
-### Form
-Die Dokumentation dieser Konzepte kann vielfältig ausfallen, von ausführlichen Konzeptpapieren bis hin zu implementierten Beispielen. Darüber hinaus können übergreifende Modelle und Szenarien entwickelt werden, die mit den in den Architektursichten verwendeten Notationen kompatibel sind. Im Fall von technischen Konzepten bietet sich die beispielhafte Implementierung als Demonstrator an, um die Prinzipien verständlich zu machen.
 
 ## Schnittstellen
 
@@ -316,7 +368,13 @@ In dem vorgestellten Projekt wird eine Vielzahl von externen Schnittstellen sowi
 Für die Bereitstellung diverser Funktionen, etwa Übersetzungen, Informationsbeschaffung und Wetterdaten, werden die DeepL API, die Wikipedia API und die OpenWeather API eingesetzt. Alle drei Schnittstellen setzen auf das HTTP-Protokoll und verwenden JSON als Datenformat. Die Authentifizierung erfolgt durch einen API-Schlüssel, wobei die Wikipedia API keine Authentifizierung erfordert.
 
 **Zuverlässigkeit und Fehlerresilienz bei externen APIs**
-Verschiedene Strategien wurden entwickelt, um die Zuverlässigkeit und Fehlerresilienz bei der Nutzung dieser APIs zu gewährleisten. Fehlercodes, die von den APIs zurückgegeben werden, werden spezifisch verarbeitet. Ein Timeout von 10 Sekunden für API-Anfragen sorgt dafür, dass diese in einem akzeptablen Zeitrahmen bearbeitet werden. Bei Zeitüberschreitungen werden bis zu zwei Wiederholungsversuche unternommen.
+Im Kontext des AllNightLong-Projekts ist die Zuverlässigkeit der externen APIs besonders wichtig, da das System stark von diesen Diensten abhängt. Fehler oder Verzögerungen in der API-Kommunikation könnten zu einer minderwertigen Benutzererfahrung führen. Daher sind verschiedene Strategien zur Fehlerresilienz und Zuverlässigkeit implementiert.
+
+### Behandlung von Fehlercodes
+Das AllNightLong-Projekt beinhaltet in den API-Klassen (WikiApi, WeatherApi, TranslateApi) Mechanismen zur Verarbeitung von Fehlercodes, die von den externen APIs zurückgegeben werden. Diese Fehlercodes werden spezifisch verarbeitet und können, je nach Bedarf, in benutzerfreundliche Meldungen übersetzt oder für weitere Analysen und Aktionen genutzt werden.
+
+### Timeouts und Wiederholungsversuche
+Eine weitere Maßnahme zur Steigerung der Zuverlässigkeit ist die Festlegung eines Timeouts von 10 Sekunden für API-Anfragen. Dies stellt sicher, dass die Anfragen in einem akzeptablen Zeitrahmen abgeschlossen werden und nicht endlos laufen. Falls ein Timeout auftritt, werden automatisch bis zu zwei Wiederholungsversuche unternommen, bevor ein Fehler zurückgegeben wird. Diese Wiederholungsstrategie erhöht die Wahrscheinlichkeit einer erfolgreichen Anfrage, selbst wenn temporäre Netzwerkprobleme oder andere Störungen auftreten.
 
 **Skalierbarkeit bei externen APIs**
 Die Skalierbarkeit wurde ebenfalls berücksichtigt, indem die APIs austauschbar gestaltet sind. Dadurch kann das System flexibel an unterschiedliche Anforderungen und Gegebenheiten angepasst werden.
@@ -421,7 +479,7 @@ Ein ausführlicher Installationsleitfaden für Java/Maven ist im Repository verf
 
 ## Konfiguration
 
-In der Softwarearchitektur des AllNightLong-Projekts ist die Konfigurierbarkeit ein Schlüsselelement für die Anpassungsfähigkeit und Skalierbarkeit des Systems. Die Software bietet eine Vielzahl an Konfigurationsoptionen, die es ermöglichen, spezifische Funktionalitäten zu aktivieren, deaktivieren oder zu modifizieren. Diese Optionen sind in einer zentralen Konfigurationsdatei gespeichert, die im JSON-, XML- oder YAML-Format vorliegen kann. Änderungen an dieser Datei können weitreichende Auswirkungen auf die Funktionalität des Systems haben, einschließlich der Aktivierung von bestimmten Chatbots, der Anpassung der API-Schlüssel für externe Dienste oder der Modifikation der Datenbankverbindungen. Daher ist beim Editieren der Konfigurationsdatei Vorsicht geboten. Es ist empfehlenswert, vor jeder Änderung eine Sicherungskopie der aktuellen Konfiguration zu erstellen. So wird die Wiederherstellung der vorherigen Einstellungen im Falle eines Fehlers erleichtert.
+In der Softwarearchitektur des AllNightLong-Projekts ist die Konfigurierbarkeit ein Schlüsselelement für die Anpassungsfähigkeit und Skalierbarkeit des Systems. Die Software bietet eine Vielzahl an Konfigurationsoptionen, die es ermöglichen, spezifische Funktionalitäten zu aktivieren, deaktivieren oder zu modifizieren. Diese Optionen sind in einer zentralen Konfigurationsdatei gespeichert, die im JSON--Format vorliegen kann. Änderungen an dieser Datei können weitreichende Auswirkungen auf die Funktionalität des Systems haben, einschließlich der Aktivierung von bestimmten Chatbots, der Anpassung der API-Schlüssel für externe Dienste oder der Modifikation der Datenbankverbindungen. Daher ist beim Editieren der Konfigurationsdatei Vorsicht geboten. Es ist empfehlenswert, vor jeder Änderung eine Sicherungskopie der aktuellen Konfiguration zu erstellen. So wird die Wiederherstellung der vorherigen Einstellungen im Falle eines Fehlers erleichtert.
 
 ## Bot-Dokumentation (Erweiterung)
 
