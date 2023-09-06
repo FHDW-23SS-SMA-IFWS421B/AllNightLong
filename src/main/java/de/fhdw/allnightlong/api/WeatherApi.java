@@ -22,12 +22,20 @@ public class WeatherApi implements ApiProcessor {
 
     @Override
     public String processRequest(String query) {
-        if (query.startsWith("wie ist das Wetter in ")) {
-            return getCurrentWeather(query.substring("wie ist das Wetter in ".length()));
-        } else if (query.startsWith("wie wird das Wetter in ")) {
-            return getWeatherForecast(query.substring("wie wird das Wetter in ".length()));
+
+        try {
+            String lowerCaseQuery = query.toLowerCase();
+            if (lowerCaseQuery.startsWith("wie ist das wetter in ")) {
+                return getCurrentWeather(query.substring("wie ist das wetter in ".length()));
+            } else if (lowerCaseQuery.startsWith("wie wird das wetter in ")) {
+                return getWeatherForecast(query.substring("wie wird das wetter in ".length()));
+            }
+            return "Ich verstehe die Anfrage nicht.";
+        } catch (Exception e) {
+            System.err.println("Ein Fehler ist aufgetreten: " + e.getMessage());
+            return "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut. Die Struktur muss sein: '@wetterbot wie ist das Wetter in [stadt]' oder @wetterbot wie wird das Wetter in[stadt]";
+
         }
-        throw new RuntimeException("Ich verstehe die Anfrage nicht.");
     }
 
     private String getCurrentWeather(String location) {
