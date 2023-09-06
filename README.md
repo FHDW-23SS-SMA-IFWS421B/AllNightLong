@@ -148,7 +148,7 @@ Die Kontextabgrenzung für "AllNightLong" erfolgt durch eine Kombination von Met
 
 ### Visualisierunng mithilfe eins Kontextdiagramms
 ![Kontext Diagramm](docs/Context_Diagram.jpg)
-### UML Diagramm
+
 
 ### Zusammenfassung
 Die Kontextabgrenzung dient als Grundlage für das Verständnis und die Weiterentwicklung des "All Night Long" Systems. Sie bietet ein klares Bild der fachlichen und technischen Aspekte, die für die Kommunikation und Interaktion mit externen und internen Entitäten relevant sind. Dies trägt dazu bei, die Komplexität zu bewältigen und Risiken zu minimieren.
@@ -174,10 +174,40 @@ Neben technischen Überlegungen umfasst meine Lösungsstrategie auch organisator
 
 Die gefällten Entscheidungen bilden das Fundament für die Planung und Umsetzung unseres Systems. Sie sind darauf ausgerichtet, die Zielvorgaben der Projektbeschreibung effizient zu realisieren, während sie zugleich eine widerstandsfähige und skalierbare Architektur ermöglichen. In den nachfolgenden Abschnitten werden diese einzelnen Entscheidungen detailliert betrachtet und ihre Einflüsse auf die Gesamtstruktur erläutert.
 
+##Bausteinsicht
+
+### Überblick über die Architektur
+Das AllNightLong-Projekt ist modular aufgebaut und besteht aus verschiedenen unabhängigen, aber integrierten Komponenten. Die Hauptmodule sind:
+
+### API Utility Klassen
+API-Schnittstellen und Klassen
+Bot-Klassen
+Managementsysteme
+Datenbank- und Chat-Management
+Benutzerverwaltung
+API Utility Klassen
+Die Utility-Klassen bieten grundlegende Funktionen zur Verarbeitung von JSON (JsonUtil), zur HTTP-Kommunikation (HttpUtil), zum Kompilieren von Java-Quellcode (CompilerUtil), sowie zur Konfiguration (AppConfig).
+
+### API-Schnittstellen und Klassen
+Es gibt spezialisierte Klassen für verschiedene APIs: WikiApi für Wikipedia-Abfragen, WeatherApi für Wetterinformationen und TranslateApi für Übersetzungen. Diese Klassen implementieren jeweils spezifische Schnittstellen wie Wikiprocessor, WeatherService und TranslationProcessor.
+
+### Bot-Klassen
+Die Bot-Klassen (TranslateBot, WeatherBot, Wikibot) nutzen die API-Klassen und sind für die Beantwortung von Benutzeranfragen verantwortlich. Sie implementieren die Schnittstelle ChatBot.
+
+### Managementsysteme
+Der SimpleChatBotManager ist für die Verwaltung der verschiedenen Bot-Klassen zuständig, während der ChatManager und der SqlLiteManager für das Datenbank- und Chat-Management verantwortlich sind.
+
+### Benutzerverwaltung
+Die Benutzerauthentifizierung wird durch die SimpleUserManager- und SimpleAuthenticator-Klassen verwaltet, die die UserManager- und Authenticator-Schnittstellen implementieren.
+
+## Beziehungen zwischen den Komponenten
+Die Bot-Klassen sind von den API-Klassen abhängig.
+SimpleChatBotManager verwaltet alle Bot-Klassen.
+SqlLiteManager ist für die Datenbank-Interaktionen verantwortlich und wird vom ChatManager verwendet.
+AppConfig wird von verschiedenen API-Klassen zur Abfrage von Konfigurationsdaten verwendet.
 ## Laufzeitsichten
 ![SMA](docs/SMA.jpg)
 
-### Einleitung
 Das vorliegende Business Process Model and Notation (BPMN) beschreibt die Benutzerinteraktionen mit der AllNightLong-Software, die drei spezialisierte Chatbots integriert. Diese Chatbots greifen auf Informationen von Wikipedia, Openweather und DeepL über APIs zu.
 
 
