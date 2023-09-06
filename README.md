@@ -17,7 +17,7 @@
         - [Fachliche Schnittstellen](#fachliche-schnittstellen)
     - [Technischer Kontext](#technischer-kontext)
         - [Technische Schnittstellen](#technische-schnittstellen)
-    - [Visualisierung mithilfe eines Kontextdiagramms](#visualisierung-mithilfe-eines-kontextdiagramms)
+    - [Visualisierunng mithilfe eins Kontextdiagramms](#visualisierunng-mithilfe-eins-kontextdiagramms)
     - [Schlussfolgerung](#schlussfolgerung)
 6. [Lösungsstrategie](#lösungsstrategie)
    - [Motivation](#motivation-1)
@@ -72,7 +72,7 @@
 15. [Fehlerbehebung](#fehlerbehebung)
 16. [Installationsanleitung](#installationsanleitung)
 17. [Konfiguration](#konfiguration)
-18. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation-erweiterung)
+18. [Bot-Dokumentation (Erweiterung)](#bot-dokumentation)
     - [Allgemeine Bot-Dokumentation zu allen Bots](#allgemeine-bot-dokumentation-zu-allen-bots)
         - [Kontextabgrenzung](#kontextabgrenzung-1)
         - [Lösungsstrategie](#lösungsstrategie-1)
@@ -478,9 +478,9 @@ Ein ausführlicher Installationsleitfaden für Java/Maven ist im Repository verf
 
 In der Softwarearchitektur des AllNightLong-Projekts ist die Konfigurierbarkeit ein Schlüsselelement für die Anpassungsfähigkeit und Skalierbarkeit des Systems. Die Software bietet eine Vielzahl an Konfigurationsoptionen, die es ermöglichen, spezifische Funktionalitäten zu aktivieren, deaktivieren oder zu modifizieren. Diese Optionen sind in einer zentralen Konfigurationsdatei gespeichert, die im JSON--Format vorliegen kann. Änderungen an dieser Datei können weitreichende Auswirkungen auf die Funktionalität des Systems haben, einschließlich der Aktivierung von bestimmten Chatbots, der Anpassung der API-Schlüssel für externe Dienste oder der Modifikation der Datenbankverbindungen. Daher ist beim Editieren der Konfigurationsdatei Vorsicht geboten. Es ist empfehlenswert, vor jeder Änderung eine Sicherungskopie der aktuellen Konfiguration zu erstellen. So wird die Wiederherstellung der vorherigen Einstellungen im Falle eines Fehlers erleichtert.
 
-## Bot-Dokumentation (Erweiterung)
+## Bot-Dokumentation
 
-### Algemeine Bot-Dokumentation zu allen Bots
+### Allgemeine Bot-Dokumentation zu allen Bots
 
 #### Kontextabgrenzung
 Die Bot-Architektur des AllNightLong-Projekts ist modular aufgebaut, wodurch die Integration neuer Bots oder die Erweiterung bestehender Bots effizient ermöglicht wird. Jeder Bot fungiert als eigenständige Einheit innerhalb des Gesamtsystems und hat spezifische Aufgaben, wie beispielsweise die Informationsbeschaffung oder die Interaktion mit dem Benutzer. Die Kontextabgrenzung dient zur Identifizierung des Einsatzbereichs und der Verantwortlichkeiten jedes Bots im Kontext des gesamten Systems.
