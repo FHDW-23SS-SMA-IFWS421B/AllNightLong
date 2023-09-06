@@ -200,7 +200,7 @@ Der SimpleChatBotManager ist für die Verwaltung der verschiedenen Bot-Klassen z
 ### Benutzerverwaltung
 Die Benutzerauthentifizierung wird durch die SimpleUserManager- und SimpleAuthenticator-Klassen verwaltet, die die UserManager- und Authenticator-Schnittstellen implementieren.
 
-## Beziehungen zwischen den Komponenten
+### Beziehungen zwischen den Komponenten
 Die Bot-Klassen sind von den API-Klassen abhängig.
 SimpleChatBotManager verwaltet alle Bot-Klassen.
 SqlLiteManager ist für die Datenbank-Interaktionen verantwortlich und wird vom ChatManager verwendet.
@@ -307,7 +307,7 @@ Die Dokumentation dieser Konzepte kann vielfältig ausfallen, von ausführlichen
 | OpenWeather API | Wetterdatenabruf für bestimmte Standorte  | GET         | HTTP                    | JSON        | API-Key (aus Credential-Ordner) |
 | SQLite          | Datenbankzugriff                          | Lese/Schreib | SQL                     | N/A         | N/A                           |
 
-###Spezifikation zur robusten Kommunikation
+### Spezifikation zur robusten Kommunikation
 
 In dem vorgestellten Projekt wird eine Vielzahl von externen Schnittstellen sowie eine interne Datenbanktechnologie genutzt. Dieser Abschnitt beleuchtet die Implementierungsdetails dieser Kommunikation und legt dar, welche sorgfältigen Überlegungen in Bezug auf Zuverlässigkeit, Fehlerbehandlung und Skalierbarkeit angestellt wurden.
 
