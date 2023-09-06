@@ -21,6 +21,7 @@ public class TranslateBot implements ChatBot {
             String text = parts[1];
             return apiProcessor.translate(text, targetLanguageCode);
         } catch (Exception e) {
+            System.err.println("Ein Fehler ist aufgetreten: " + e.getMessage());
             return "Ungültige Anfrage. Format sollte sein: 'Übersetze mir das ins [Sprache]: [Text]'";
         }
     }

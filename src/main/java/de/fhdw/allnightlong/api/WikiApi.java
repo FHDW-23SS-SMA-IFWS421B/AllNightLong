@@ -27,8 +27,8 @@ public class WikiApi implements Wikiprocessor {
             return processHttpRequest(client, request);
         } catch (Exception e) {
             System.err.println("Ein Fehler ist aufgetreten: " + e.getMessage());
-
-            return new JSONArray(); // Rückgabe eines leeren JSONArray
+            System.out.println("Achten sie auf die Struktur: '@wikibot was ist [wonach sie suchen]" );
+            return new JSONArray();
         }
     }
 
