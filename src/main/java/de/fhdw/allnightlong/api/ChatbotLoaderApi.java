@@ -4,7 +4,6 @@ package de.fhdw.allnightlong.api;
 import de.fhdw.allnightlong.bots.chatbot.ChatBotRegistry;
 import de.fhdw.allnightlong.bots.chatbot.CreateChatBot;
 import de.fhdw.allnightlong.utils.CompilerUtil;
-@Deprecated
 public class ChatbotLoaderApi implements ChatbotLoader {
 
     private final ChatBotRegistry registry;
