@@ -95,11 +95,12 @@
         - [Kontextabgrenzung](#kontextabgrenzung-4)
         - [Lösungsstrategie](#lösungsstrategie-4)
         - [Bausteinsicht](#bausteinsicht-4)
-        - [Laufzeitsicht](#laufzeitsicht-4)
+        - [Laufzeitsicht](#laufzeitsicht-3)
         - [Schnittstellen](#schnittstellen-4)
 19. [Ausblick](#ausblick)
     - [Zukünftige Entwicklungsmöglichkeiten](#zukünftige-entwicklungsmöglichkeiten)
     - [Technische Schulden und Risiken](#technische-schulden-und-risiken)
+    - [Zukünftige Weiterarbeit: Integration neuer Chatbot-Modelle](#zukünftige-weiterarbeit-integration-neuer-chatbot-modelle)
 20. [Fazit](#fazit)
 
 
@@ -559,5 +560,16 @@ Im Ausblick auf die Weiterentwicklung ist es wesentlich, den Fokus auf Skalierba
 ### Technische Schulden und Risiken
 Es ist unumgänglich, bei der Weiterentwicklung auch die technischen Schulden im Auge zu behalten. Da das System bereits jetzt eine hohe Komplexität aufweist, könnten ungelöste Probleme und unfertige Elemente die zukünftige Entwicklung behindern. Dies betrifft sowohl die Software-Architektur als auch die Abhängigkeiten von externen APIs und Datenbanklimitierungen.
 
+### Zukünftige Weiterarbeit: Integration neuer Chatbot-Modelle
+In weiterführenden Versionen des AllNightLong-Systems liegt das Hauptaugenmerk auf der Optimierung der Backend-Logik und der Benutzerfreundlichkeit, um die Integration von Chatbots effizienter und flexibler zu gestalten. Die aktuelle Architektur verfügt bereits über Schlüsselkomponenten wie die ChatbotLoaderApi-Klasse, die eine zentrale Rolle bei der Modulintegration spielt. Sie implementiert das ChatbotLoader-Interface und erlaubt das Einbinden neuer Chatbots durch Übergeben von Quellcode und Klassennamen als Parameter.
+
+Auf der Ebene der Backend-Logik besteht Optimierungspotenzial, insbesondere im Bereich der dynamischen Kompilierung des Quellcodes durch die CompilerUtil-Klasse. Durch Weiterentwicklung dieser Kompilierungslogik könnten Skalierbarkeit und Modularität des Systems verbessert werden, ohne Einbußen bei der Leistung hinzunehmen.
+
+Im Hinblick auf die Benutzerfreundlichkeit und die Anpassungsfähigkeit des Systems könnte die Architektur in zukünftigen Versionen erweitert werden, um eine nahtlose Integration von Chatbots zu ermöglichen, die in unterschiedlichen Programmiersprachen oder Frameworks entwickelt wurden. Eine Flexibilisierung der Schnittstellen und der Architektur könnte in diesem Kontext von großer Bedeutung sein.
+
+Ein weiterer zentraler Aspekt ist die Implementierung des CreateChatBot-Interfaces. Diese Schnittstelle gewährleistet die standardisierte Kommunikation zwischen den verschiedenen Chatbot-Modellen und dem ChatBotRegistry, einer zentralen Verwaltungsinstanz für Chatbot-Implementierungen. Die Implementierung dieses Interfaces trägt zur nahtlosen Integration in das AllNightLong-System bei und könnte als ein zentraler Faktor in der zukünftigen Entwicklung des Systems betrachtet werden.
+
+Insgesamt bilden diese Überlegungen einen Leitfaden für die Weiterentwicklung des AllNightLong-Systems, mit dem Fokus auf einer einfacheren Integration und Verwaltung von verschiedenen Chatbot-Modellen.
+Für zukünftige Versionen von AllNightLong wäre es denkbar, die Schnittstellen und Architektur noch flexibler zu gestalten. Dies könnte die Einbindung verschiedener Chatbot-Technologien erleichtern und somit die Anpassungsfähigkeit des Systems erhöhen. Dies gewährleistet eine standardisierte Kommunikation und ermöglicht eine nahtlose Integration in das bestehende AllNightLong-System.
 ## Fazit
 Zusammenfassend bietet das AllNightLong-Projekt eine robuste Grundlage für die Erstellung komplexer Chatbot-Systeme. Trotz einiger technischer Schulden und Herausforderungen bei der Skalierbarkeit zeigt die bisherige Arbeit, dass der Weg in Richtung einer umfassenden und intelligenten Chatbot-Lösung eingeschlagen ist. Die modulare Struktur fördert die Erweiterbarkeit und Anpassungsfähigkeit, wobei eine ständige Evaluierung und Anpassung kritisch für den langfristigen Erfolg des Projekts ist.

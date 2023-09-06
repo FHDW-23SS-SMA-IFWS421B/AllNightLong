@@ -59,7 +59,7 @@ public class AllNightLong {
             System.out.println(msg);
         }
         while (true) {
-            System.out.print("user: ");
+            System.out.print("[" + username + "]: ");
             String line = scanner.nextLine();
             String output = chatBotManager.execute(line, username, chatManager);
             System.out.println(output);
